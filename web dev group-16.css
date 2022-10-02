@@ -1,0 +1,133 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      text-align: center;
+
+  }
+  
+  h1 {
+      margin-top: 50px;
+      font-size: 4.5rem;
+  }
+  
+  .bg {
+      animation: slide 7s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #411900 50%, burlywood 50%);
+      bottom: 0;
+      left: -50%;
+      opacity: .5;
+      position: fixed;
+      right: -50%;
+      top: 0;
+      z-index: -1;
+  }
+  
+  .bg2 {
+      animation-direction: alternate-reverse;
+      animation-duration: 9s;
+  }
+  
+  .bg3 {
+      animation-duration: 9s;
+  }
+  
+  @keyframes slide {
+      0% {
+          transform: translateX(-25%);
+      }
+      100% {
+          transform: translateX(25%);
+      }
+  }
+  
+  .note-app {
+      display: grid;
+      width: 50%;
+      margin: 0 auto;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 35px;
+      padding: 24px;
+  }
+  
+  .text {
+      height: 200px;
+      padding-top: 10px;
+      padding-left: 8px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      border: none;
+      font-size: 1.3rem;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+  
+  .add-note {
+      background: rgba(0, 0, 0, 0.1);
+      height: 200px;
+      border-radius: 10px;
+      border: none;
+      font-size: 1.5rem
+  }
+  
+  /*------media queries for mobile and tablet screen sizes------*/
+
+/*------------------------------media queries----------------------------*/
+@media only screen and (min-width: 320px) and (max-width: 468px){
+    h1{
+      font-size: 2.7rem
+    }
+  .note-app{
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 160px);
+    grid-gap: 15px;
+    padding: 18px
+  }
+   .text{
+    font-size: 1.5rem   
+  }
+
+   }
+/*---------------------------media queries---------------------*/
+   @media only screen and (min-width: 470px) and (max-width: 500px){
+    h1{
+      font-size: 2.8rem
+    }
+    .note-app{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 25px;
+    padding: 35px;
+  }
+  .text{
+    height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0 ,0, 0.2);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem   
+  }
+  
+  }
+
+  /*-------------------------media queries-----------------------------*/
+   @media only screen and (min-width: 501px) and (max-width: 1020px){
+    .note-app{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-gap: 20px;
+    padding: 24px;
+  }
+  .text{
+    height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0 ,0, 0.2);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5rem   
+  }
+  
+  }
